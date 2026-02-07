@@ -34,6 +34,10 @@ export const metadata: Metadata = {
     title: "Gran Casino de Totana",
     description: "Sociedad Cultural y Recreativa desde 1890.",
   },
+  icons: {
+    icon: "/images/brand/logo-casino.png",
+    apple: "/images/brand/logo-casino.png",
+  },
 };
 
 export const viewport: Viewport = {
