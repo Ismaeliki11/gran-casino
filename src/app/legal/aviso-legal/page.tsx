@@ -22,13 +22,13 @@ function CopyField({ label, value }: { label: string; value: string }) {
             </label>
             <div
                 onClick={handleCopy}
-                className="flex items-center justify-between p-4 rounded-xl bg-black-primary/40 border border-dorado-dark/20 text-crema hover:border-dorado-primary/40 hover:bg-black-soft/30 transition-all cursor-pointer h-full"
+                className="flex items-start justify-between p-3 md:p-4 rounded-xl bg-black-primary/40 border border-dorado-dark/20 text-crema hover:border-dorado-primary/40 hover:bg-black-soft/30 transition-all cursor-pointer h-full gap-3"
             >
-                <span className="font-mono text-sm sm:text-base break-words whitespace-normal mr-4 text-dorado-light/80">
+                <span className="text-sm md:text-base font-light break-words text-dorado-light/80 leading-relaxed">
                     {value}
                 </span>
                 <span className={cn(
-                    "text-xs font-bold uppercase tracking-wider transition-colors duration-300 shrink-0",
+                    "text-xs font-bold uppercase tracking-wider transition-colors duration-300 shrink-0 mt-1",
                     copied ? "text-green-400" : "text-dorado-dark/40 group-hover:text-dorado-primary"
                 )}>
                     {copied ? "Copiado" : <Copy size={16} />}
@@ -40,7 +40,7 @@ function CopyField({ label, value }: { label: string; value: string }) {
 
 export default function AvisoLegal() {
     return (
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-32 md:py-20 relative z-10">
             {/* Header */}
             <div className="text-center mb-16 md:mb-24 space-y-6">
                 <motion.div
