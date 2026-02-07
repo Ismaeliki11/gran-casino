@@ -9,30 +9,50 @@ El proyecto nace de la necesidad de modernizar la presencia digital de la socied
 - **Gestión Dinámica de Actividades:** Facilitar la organización, reserva y difusión de actividades culturales, lúdicas y sociales.
 - **Digitalización de Procesos:** Modernizar trámites como el alta de nuevos socios y la comunicación institucional.
 
-## 🛠️ Stack Tecnológico
-Para garantizar una experiencia de usuario premium, rápida y escalable, se ha seleccionado el siguiente stack:
-- **Framework:** [Next.js 14+ (App Router)](https://nextjs.org/) - Para renderizado optimizado y SEO excelente.
-- **Lenguaje:** [TypeScript](https://www.typescriptlang.org/) - Para un desarrollo robusto y tipado.
-- **Estilos:** [Tailwind CSS](https://tailwindcss.com/) - Diseño moderno y responsivo con utilidades.
-- **Iconografía:** [Lucide React](https://lucide.dev/) - Iconos consistentes y ligeros.
-- **Utilidades:** `clsx` y `tailwind-merge` - Para gestión dinámica de clases CSS.
+## 🛠️ Stack Tecnológico (Vanguardia)
+Para garantizar una experiencia de usuario premium, rápida y escalable, se utiliza un stack de última generación:
+- **Core:** [Next.js 16 (App Router)](https://nextjs.org/) + [React 19](https://react.dev/)
+- **Lenguaje:** [TypeScript](https://www.typescriptlang.org/) - Rigurosidad y escalabilidad.
+- **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/) - Motor de estilos de alto rendimiento.
+- **Motion Design:** [Framer Motion](https://www.framer.com/motion/) - Animaciones complejas, transiciones suaves y scroll-driven effects.
+- **Iconografía:** [Lucide React](https://lucide.dev/) - Sistema iconográfico consistente.
+
+## ✨ Estado Actual y Funcionalidades
+El proyecto cuenta con un **Sistema de Diseño "LiquidGlass"** exclusivo (detallado en `DESIGN_SYSTEM.md`) que fusiona la identidad histórica (Negro/Dorado) con interfaces modernas.
+
+### Secciones Implementadas:
+1.  **Inicio (Home):**
+    - **Hero Inmersivo:** Carrusel de fondo con transiciones suaves y animaciones de entrada coordinadas.
+    - **Narrativa Visual:** Secciones de "Legado", "Eventos" y "Distinción" con efectos de revelación al hacer scroll.
+    - **Información de Visita:** Tarjetas interactivas con ubicación y contacto.
+
+2.  **Historia (`/historia`):**
+    - **Timeline Interactivo:** Línea de tiempo "Trayectoria Centenaria" responsive (adaptada a móvil/desktop) con hitos desde 1917.
+    - **Patrimonio Oculto:** Sección interactiva sobre los murales de Fernando Gamonal con efecto "reveal" (click/hover).
+    - **Arquitectura:** Destacado visual de "La Pecera" y acordeón con dossiers históricos detallados.
+
+3.  **Cultura (`/cultura`):**
+    - **Catálogo de Espacios:** Recorrido visual por el Salón Modernista, Biblioteca y La Pecera con detalles flotantes.
+    - **Agenda Viva:** Listado de eventos culturales reales (conciertos, presentaciones literarias).
+
+4.  **Área de Socios (`/socios`):**
+    - **Alta Digital:** Formulario institucional completo para solicitud de admisión.
+    - **Gestión Documental:** Integración de descarga de documentos PDF (Estatutos, Hoja de Inscripción).
+    - **Estética Formal:** Diseño orientado a la solemnidad del proceso de ingreso.
 
 ## 📂 Estructura del Proyecto (src/)
-La arquitectura del proyecto sigue principios de escalabilidad y separación de responsabilidades:
-- `app/`: Directorio raíz de rutas, layouts y estados globales (App Router).
+La arquitectura está modulada para facilitar el mantenimiento:
+- `app/`: Rutas, layouts y páginas (App Router).
 - `components/`:
-  - `ui/`: Componentes atómicos de interfaz (botones, inputs, modales).
-  - `layout/`: Estructura base de la aplicación (Header, Footer, Nav).
-  - `shared/`: Componentes de negocio reutilizables en diferentes secciones.
-- `lib/`: Configuraciones de librerías externas y funciones de utilidad (ej. `utils.ts` para clases CSS).
-- `styles/`: Archivos CSS globales y configuración de variables de tema.
-- `hooks/`: Custom hooks para lógica reutilizable.
-- `types/`: Definiciones de interfaces y tipos TypeScript.
+  - `ui/`: Biblioteca de componentes premium (`PremiumButton`, `PremiumCard`, `HeroCarousel`, `CasinoLogo`).
+  - `layout/`: Navegación global (`Navbar`, `BottomNav` para móvil).
+- `lib/`: Utilidades y configuraciones.
+- `styles/`: Variables CSS globales y configuración de fuentes (`Playfair Display` + `Inter`).
 
-## 📅 Roadmap de Funcionalidades
-1. **Sección Pública Histórica:** Espacio dedicado a la historia del edificio, fotografías de archivo y legado cultural.
-2. **Agenda de Eventos:** Calendario interactivo con actividades para socios y público general.
-3. **Formulario Digital de Socios:** Proceso simplificado para la solicitud de nuevas altas.
+## 📅 Próximos Pasos (Roadmap)
+- [ ] Implementación de backend para gestión de reservas.
+- [ ] Área privada de socios (Login/Dashboard).
+- [ ] Blog de noticias automatizado con IA.
 
 ---
 ### Guía de Inicio Rápido
