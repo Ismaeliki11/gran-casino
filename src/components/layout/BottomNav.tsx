@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Home, History, Calendar, Phone, Users } from "lucide-react";
+import { Home, History, Calendar, Users, Utensils } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -11,7 +11,7 @@ const navItems = [
     { name: "Historia", href: "/historia", icon: History },
     { name: "Socios", href: "/socios", icon: Users },
     { name: "Cultura", href: "/cultura", icon: Calendar },
-    { name: "Contacto", href: "/contacto", icon: Phone },
+    { name: "Gastro", href: "/restaurante", icon: Utensils },
 ];
 
 export default function BottomNav() {

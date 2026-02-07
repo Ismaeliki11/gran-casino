@@ -40,6 +40,11 @@ El proyecto cuenta con un **Sistema de Diseño "LiquidGlass"** exclusivo (detall
     - **Gestión Documental:** Integración de descarga de documentos PDF (Estatutos, Hoja de Inscripción).
     - **Estética Formal:** Diseño orientado a la solemnidad del proceso de ingreso.
 
+5.  **Gastronomía (`/restaurante`):**
+    - **Carta Digital Premium:** Menú completo estructurado en Entrantes, Principales, Postres y Bodega.
+    - **Estado del Servicio:** Aviso "Próximamente" integrado elegantemente para informar sobre la pausa del servicio.
+    - **Acceso Exclusivo:** Información sobre eventos privados para socios.
+
 ## 📂 Estructura del Proyecto (src/)
 La arquitectura está modulada para facilitar el mantenimiento:
 - `app/`: Rutas, layouts y páginas (App Router).

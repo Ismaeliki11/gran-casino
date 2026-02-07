@@ -14,6 +14,7 @@ const navLinks = [
     { name: "Inicio", href: "/" },
     { name: "Historia", href: "/historia" },
     { name: "Cultura", href: "/cultura" },
+    { name: "Gastronomía", href: "/restaurante" },
     { name: "Contacto", href: "/contacto" },
 ];
 
@@ -124,10 +125,10 @@ export default function Navbar() {
 
                         {/* Actions Area */}
                         <div className="flex items-center gap-4 shrink-0">
-                            <Link href="/socios">
+                            <Link href="/socios" className="hidden lg:block">
                                 <PremiumButton
                                     variant="primary"
-                                    className="px-4 py-1.5 sm:px-8 sm:py-2.5 text-[8px] sm:text-[10px] uppercase tracking-[0.2em] font-bold"
+                                    className="min-h-[32px] h-[32px] sm:min-h-[48px] sm:h-auto px-3 sm:px-8 text-[9px] sm:text-[10px] uppercase tracking-wide sm:tracking-[0.2em] font-bold"
                                 >
                                     Hacerse Socio
                                 </PremiumButton>
