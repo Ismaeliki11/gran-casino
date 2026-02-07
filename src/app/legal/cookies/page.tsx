@@ -1,7 +1,7 @@
 "use client";
 
 import { Cookie, Settings, ShieldCheck, Info } from "lucide-react";
-import { LegalPageHeader, LegalSection } from "@/components/legal/LegalComponents"; // I need to export these from a file. I'll create `src/components/legal/LegalComponents.tsx` containing the logic.
+
 
 // Wait, I created LegalComponents.tsx in the previous step but I didn't export them as named exports. Let me double check content of `src/components/legal/LegalComponents.tsx`
 // Ah, the previous step created `src/components/legal/LegalComponents.tsx` but the code content was good.
