@@ -47,6 +47,8 @@ export const viewport: Viewport = {
   themeColor: "#0a0a0a",
 };
 
+import BottomNav from "@/components/layout/BottomNav";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -58,6 +60,7 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} antialiased`}
       >
         {children}
+        <BottomNav />
       </body>
     </html>
   );

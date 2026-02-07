@@ -80,7 +80,7 @@ export default function HeroCarousel() {
             </AnimatePresence>
 
             {/* Text Overlay for Carousel */}
-            <div className="absolute bottom-20 sm:bottom-16 left-4 sm:left-6 md:left-24 right-16 md:right-auto z-30 max-w-[75%] sm:max-w-lg">
+            <div className="absolute bottom-20 sm:bottom-16 left-4 sm:left-6 md:left-24 right-16 md:right-auto z-30 max-w-[75%] sm:max-w-lg hidden sm:block">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={`text-${currentIndex}`}

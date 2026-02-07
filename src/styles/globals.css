@@ -32,11 +32,21 @@
 
   --font-serif: var(--font-playfair);
   --font-sans: var(--font-inter);
+
+  /* Fluid Typography & Spacing */
+  --text-hero: clamp(2.5rem, 10vw + 1rem, 10rem);
+  --text-h1: clamp(2rem, 6vw + 1rem, 6rem);
+  --text-h2: clamp(1.75rem, 4vw + 1rem, 4rem);
+  --text-h3: clamp(1.5rem, 3vw + 1rem, 3rem);
+  --section-py: clamp(4rem, 10vw, 10rem);
+  --section-px: clamp(1.5rem, 7vw, 5rem);
 }
+
 
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -48,10 +58,24 @@ body {
   overflow-x: clip;
   padding-left: var(--safe-left);
   padding-right: var(--safe-right);
+  /* App-like feel */
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* Allow text selection only on non-clickable content */
+p,
+h1,
+h2,
+h3,
+h4,
+span:not(.no-select) {
+  user-select: text;
 }
 
 main {
   overflow-x: clip;
+  min-height: 100dvh;
 }
 
 h1,
@@ -61,6 +85,15 @@ h4,
 h5,
 h6 {
   font-family: var(--font-serif), serif;
+  letter-spacing: -0.02em;
+}
+
+.no-tap-highlight {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-transition-slide {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
 }
 
 /* LiquidGlass Implementation (Metal Líquido Premium) */
@@ -136,6 +169,32 @@ h6 {
   }
 }
 
+.fluid-h1 {
+  font-size: var(--text-h1);
+}
+
+.fluid-h2 {
+  font-size: var(--text-h2);
+}
+
+.fluid-h3 {
+  font-size: var(--text-h3);
+}
+
+.fluid-hero {
+  font-size: var(--text-hero);
+}
+
+.fluid-py {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+}
+
+.fluid-px {
+  padding-left: var(--section-px);
+  padding-right: var(--section-px);
+}
+
 /* Typography & Utility */
 .text-gold {
   background: linear-gradient(180deg, var(--dorado-claro) 0%, var(--dorado-principal) 50%, var(--dorado-oscuro) 100%);
@@ -191,6 +250,7 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
