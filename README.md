@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sociedad del Gran Casino de Totana - Plataforma Digital
 
-## Getting Started
+## 🏛️ Contexto del Proyecto
+La **Sociedad del Gran Casino de Totana** es una institución emblemática con más de 100 años de historia. Ubicada en un edificio histórico, ha sido el epicentro cultural e institucional de Totana (Murcia). Su rica historia y arquitectura la convierten en un pilar fundamental de la vida social de la ciudad.
 
-First, run the development server:
+## 🎯 Objetivos
+El proyecto nace de la necesidad de modernizar la presencia digital de la sociedad para cumplir los siguientes objetivos:
+- **Rejuvenecimiento de la Base Social:** Atraer a una nueva generación de socios, adaptando la comunicación y los servicios a las expectativas del siglo XXI sin perder su esencia institucional.
+- **Gestión Dinámica de Actividades:** Facilitar la organización, reserva y difusión de actividades culturales, lúdicas y sociales.
+- **Digitalización de Procesos:** Modernizar trámites como el alta de nuevos socios y la comunicación institucional.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠️ Stack Tecnológico
+Para garantizar una experiencia de usuario premium, rápida y escalable, se ha seleccionado el siguiente stack:
+- **Framework:** [Next.js 14+ (App Router)](https://nextjs.org/) - Para renderizado optimizado y SEO excelente.
+- **Lenguaje:** [TypeScript](https://www.typescriptlang.org/) - Para un desarrollo robusto y tipado.
+- **Estilos:** [Tailwind CSS](https://tailwindcss.com/) - Diseño moderno y responsivo con utilidades.
+- **Iconografía:** [Lucide React](https://lucide.dev/) - Iconos consistentes y ligeros.
+- **Utilidades:** `clsx` y `tailwind-merge` - Para gestión dinámica de clases CSS.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Estructura del Proyecto (src/)
+La arquitectura del proyecto sigue principios de escalabilidad y separación de responsabilidades:
+- `app/`: Directorio raíz de rutas, layouts y estados globales (App Router).
+- `components/`:
+  - `ui/`: Componentes atómicos de interfaz (botones, inputs, modales).
+  - `layout/`: Estructura base de la aplicación (Header, Footer, Nav).
+  - `shared/`: Componentes de negocio reutilizables en diferentes secciones.
+- `lib/`: Configuraciones de librerías externas y funciones de utilidad (ej. `utils.ts` para clases CSS).
+- `styles/`: Archivos CSS globales y configuración de variables de tema.
+- `hooks/`: Custom hooks para lógica reutilizable.
+- `types/`: Definiciones de interfaces y tipos TypeScript.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📅 Roadmap de Funcionalidades
+1. **Sección Pública Histórica:** Espacio dedicado a la historia del edificio, fotografías de archivo y legado cultural.
+2. **Agenda de Eventos:** Calendario interactivo con actividades para socios y público general.
+3. **Formulario Digital de Socios:** Proceso simplificado para la solicitud de nuevas altas.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
+### Guía de Inicio Rápido
 
-## Learn More
+**Requisitos:** Node.js 18+
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+2. Iniciar servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+3. Construir para producción:
+   ```bash
+   npm run build
+   ```
