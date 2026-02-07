@@ -1,7 +1,9 @@
 "use client";
 
-import { motion, HTMLMotionProps } from "framer-motion";
+import { motion, HTMLMotionProps, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 interface CardProps {
     children: React.ReactNode;
@@ -59,5 +61,50 @@ export function PremiumButton({ children, variant = "primary", className, ...pro
                 {children}
             </span>
         </motion.button>
+    );
+}
+
+interface AccordionProps {
+    title: string;
+    children: React.ReactNode;
+    defaultOpen?: boolean;
+}
+
+export function PremiumAccordion({ title, children, defaultOpen = false }: AccordionProps) {
+    const [isOpen, setIsOpen] = useState(defaultOpen);
+
+    return (
+        <div className="border-b border-dorado-dark/10">
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="w-full py-6 sm:py-8 flex items-center justify-between text-left group transition-all"
+            >
+                <h3 className="text-lg sm:text-xl md:text-2xl font-serif text-crema group-hover:text-dorado-primary transition-colors">
+                    {title}
+                </h3>
+                <motion.div
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                    className="p-2 rounded-full border border-dorado-dark/20 text-dorado-primary group-hover:border-dorado-primary/40"
+                >
+                    <ChevronDown size={20} />
+                </motion.div>
+            </button>
+            <AnimatePresence initial={false}>
+                {isOpen && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                        className="overflow-hidden"
+                    >
+                        <div className="pb-8 text-dorado-light/60 text-base md:text-lg leading-relaxed font-light space-y-4">
+                            {children}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
     );
 }
