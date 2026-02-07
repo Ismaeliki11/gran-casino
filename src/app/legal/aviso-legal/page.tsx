@@ -22,13 +22,13 @@ function CopyField({ label, value }: { label: string; value: string }) {
             </label>
             <div
                 onClick={handleCopy}
-                className="flex items-center justify-between p-4 rounded-xl bg-black-primary/40 border border-dorado-dark/20 text-crema hover:border-dorado-primary/40 hover:bg-black-soft/30 transition-all cursor-pointer"
+                className="flex items-center justify-between p-4 rounded-xl bg-black-primary/40 border border-dorado-dark/20 text-crema hover:border-dorado-primary/40 hover:bg-black-soft/30 transition-all cursor-pointer h-full"
             >
-                <span className="font-mono text-sm sm:text-base truncate mr-4 text-dorado-light/80">
+                <span className="font-mono text-sm sm:text-base break-words whitespace-normal mr-4 text-dorado-light/80">
                     {value}
                 </span>
                 <span className={cn(
-                    "text-xs font-bold uppercase tracking-wider transition-colors duration-300",
+                    "text-xs font-bold uppercase tracking-wider transition-colors duration-300 shrink-0",
                     copied ? "text-green-400" : "text-dorado-dark/40 group-hover:text-dorado-primary"
                 )}>
                     {copied ? "Copiado" : <Copy size={16} />}
@@ -56,7 +56,7 @@ export default function AvisoLegal() {
                 </p>
             </div>
 
-            <div className="border border-dorado-dark/20 rounded-[2.5rem] bg-black-soft/10 backdrop-blur-md overflow-hidden shadow-2xl p-8 md:p-12 space-y-12">
+            <div className="border border-dorado-dark/20 rounded-[2.5rem] bg-black-soft/10 backdrop-blur-md overflow-hidden shadow-2xl p-5 md:p-12 space-y-12">
 
                 {/* 1. Datos Identificativos (The Core) */}
                 <div className="space-y-8">
