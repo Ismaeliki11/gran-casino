@@ -5,8 +5,8 @@ import { User, Copy, Info } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
-// Reusable Copy Field Component
-function CopyField({ label, value }: { label: string; value: string }) {
+// Reusable Data Row Component (List Style)
+function DataRow({ label, value }: { label: string; value: string }) {
     const [copied, setCopied] = useState(false);
 
     const handleCopy = () => {
@@ -16,23 +16,20 @@ function CopyField({ label, value }: { label: string; value: string }) {
     };
 
     return (
-        <div className="relative group">
-            <label className="text-[10px] uppercase tracking-[0.2em] text-dorado-primary font-bold ml-1 mb-1 block">
-                {label}
-            </label>
-            <div
-                onClick={handleCopy}
-                className="flex items-start justify-between p-3 md:p-4 rounded-xl bg-black-primary/40 border border-dorado-dark/20 text-crema hover:border-dorado-primary/40 hover:bg-black-soft/30 transition-all cursor-pointer h-full gap-3"
-            >
-                <span className="text-sm md:text-base font-light break-words text-dorado-light/80 leading-relaxed">
+        <div
+            onClick={handleCopy}
+            className="group relative p-5 md:p-6 hover:bg-white/5 transition-colors cursor-pointer flex justify-between items-start gap-6 bg-black-soft/20"
+        >
+            <div className="space-y-2 flex-1 min-w-0">
+                <p className="text-xs uppercase tracking-[0.2em] text-dorado-primary/60 font-medium">
+                    {label}
+                </p>
+                <p className="text-sm md:text-base text-crema font-light break-words leading-relaxed">
                     {value}
-                </span>
-                <span className={cn(
-                    "text-xs font-bold uppercase tracking-wider transition-colors duration-300 shrink-0 mt-1",
-                    copied ? "text-green-400" : "text-dorado-dark/40 group-hover:text-dorado-primary"
-                )}>
-                    {copied ? "Copiado" : <Copy size={16} />}
-                </span>
+                </p>
+            </div>
+            <div className="shrink-0 pt-1 text-dorado-dark/30 group-hover:text-dorado-primary transition-colors">
+                {copied ? <span className="text-green-400 text-xs font-bold uppercase tracking-wider">Copiado</span> : <Copy size={18} />}
             </div>
         </div>
     );
@@ -67,16 +64,18 @@ export default function AvisoLegal() {
                         <h2 className="text-2xl font-serif text-crema">Datos del Titular</h2>
                     </div>
 
-                    <div className="grid gap-6 md:grid-cols-2">
-                        <CopyField label="Razón Social" value="Sociedad Gran Casino de Totana" />
-                        <CopyField label="CIF / NIF" value="[PENDIENTE DE INSERTAR]" />
-                        <CopyField label="Registro" value="[PENDIENTE DE INSERTAR DATOS]" />
-                        <CopyField label="Dirección Social" value="Calle Vidal Abarca, 2. 30850 Totana" />
-                        <CopyField label="Email Oficial" value="institucion@casinototana.es" />
-                        <CopyField label="Teléfono" value="868 24 12 48" />
+                    {/* Unified Data Card Layout */}
+                    <div className="rounded-3xl border border-dorado-dark/20 overflow-hidden divide-y divide-dorado-dark/10">
+                        <DataRow label="Razón Social" value="Sociedad Gran Casino de Totana" />
+                        <DataRow label="CIF / NIF" value="[PENDIENTE DE INSERTAR]" />
+                        <DataRow label="Registro" value="[PENDIENTE DE INSERTAR DATOS RELEVANTES DEL REGISTRO]" />
+                        <DataRow label="Dirección Social" value="Calle Vidal Abarca, 2. 30850 Totana, Murcia" />
+                        <DataRow label="Email Oficial" value="institucion@casinototana.es" />
+                        <DataRow label="Teléfono" value="868 24 12 48" />
                     </div>
+
                     <p className="text-xs text-dorado-light/40 italic text-center mt-4">
-                        * Pulse sobre cualquier dato para copiarlo al portapapeles.
+                        * Pulse sobre cualquier fila para copiar el dato.
                     </p>
                 </div>
 
