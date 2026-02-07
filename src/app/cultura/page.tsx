@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
-import { Book, Trophy, MapPin, Calendar } from "lucide-react";
+import { Book, Trophy, MapPin, Calendar, Eye } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import { PremiumButton } from "@/components/ui/PremiumElements";
 import { useRef } from "react";
@@ -14,49 +14,49 @@ const realSpaces = [
         id: "salon-modernista",
         title: "Salón Modernista",
         tag: "Eje del Casino",
-        description: "Recientemente restaurado en 2021 para recuperar su esplendor original. Es el corazón social de la institución, donde se celebran las asambleas y los actos más solemnes de la sociedad totanera.",
+        description: "El centro y eje de la sociedad. Este salón polivalente conserva su aire modernista original y ha sido resignificado como auditorio para conferencias, recitales y los actos más solemnes de Totana.",
         image: "/images/hero/11zon_IMG_9124.webp",
         icon: <CasinoLogo size={40} />,
-        details: ["Restaurado en 2021", "Estilo Modernista Regionalista", "Sede de Actos Institucionales"]
+        details: ["Pinturas de Fernando Gamonal", "Estilo Modernista Regionalista", "Aforo para grandes eventos"]
     },
     {
         id: "la-biblioteca",
-        title: "Biblioteca Histórica",
-        tag: "Legado Escrito",
-        description: "Un espacio de silencio que custodia la historia de Totana. Desde su fundación en 1917, ha sido el lugar de encuentro para la lectura de prensa y la consulta de un fondo bibliográfico que es patrimonio vivo de la ciudad.",
+        title: "Biblioteca y Ateneo",
+        tag: "Legado e Intelecto",
+        description: "Un requisito indispensable desde 1917 para legitimar el carácter cultural de la sociedad. Hoy funciona como un ateneo donde se debaten noticias y se custodia un fondo bibliográfico único en el municipio.",
         image: "/images/hero/11zon_IMG_9133.webp",
         icon: <Book className="text-dorado-primary" size={40} />,
-        details: ["Fundada en 1917", "Archivo de Prensa Histórica", "Tertulias Literarias"]
+        details: ["Fundada en 1917", "Archivo de Prensa Histórica", "Presentaciones Literarias"]
     },
     {
-        id: "sala-de-juegos",
-        title: "Salones de Juego",
-        tag: "Ocio Tradicional",
-        description: "El alma recreativa del Casino. Salas acondicionadas para el billar y los juegos de mesa que han fomentado la camaradería entre generaciones de socios, manteniendo vivas las tradiciones lúdicas de la sociedad.",
-        image: "/images/hero/11zon_IMG_9138.webp",
-        icon: <Trophy className="text-dorado-primary" size={40} />,
-        details: ["Mesa de Billar Gran Match", "Torneos de Mus y Ajedrez", "Ambiente de Distinción"]
+        id: "la-pecera",
+        title: "La Pecera",
+        tag: "Escaparate Cultural",
+        description: "La famosa cristalera que mira al corazón de Totana. Históricamente un lugar de observación social, hoy se utiliza como escaparate para atraer al público a las exposiciones y eventos culturales.",
+        image: "/images/hero/IMG_9111.webp",
+        icon: <Eye className="text-dorado-primary" size={40} />,
+        details: ["Vistas a la Plaza de la Constitución", "Luz Natural", "Punto de Encuentro Social"]
     }
 ];
 
 const realEvents = [
     {
-        date: "25 JUL 2025",
-        title: "La Orden de Santiago en Totana y su Huella",
-        type: "Conferencia Histórica",
-        location: "Sede Social - Vidal Abarca, 2"
-    },
-    {
-        date: "29 NOV 2025",
-        title: "108º Aniversario de la Sociedad",
-        type: "Gala Conmemorativa",
+        date: "FEB 2024",
+        title: "Presentación: Totana y Su-per Patrimonio",
+        type: "Cómic y Divulgación",
         location: "Salón Modernista"
     },
     {
-        date: "MENSUAL",
-        title: "Tertulias 'Totana Cultural'",
-        type: "Ciclo de Conferencias",
-        location: "Biblioteca"
+        date: "MARZO",
+        title: "Festival 'Que vivan las mujeres'",
+        type: "Igualdad y Conciertos",
+        location: "Sede Social"
+    },
+    {
+        date: "ANUAL",
+        title: "Homenaje al Libro: Recital Poético",
+        type: "Literatura y Música",
+        location: "Biblioteca / Salón"
     }
 ];
 

@@ -24,8 +24,24 @@ export default function SociosPage() {
                         <span className="text-dorado-primary uppercase tracking-[0.3em] sm:tracking-[0.6em] text-[10px] font-bold block mb-4">Membresía Institucional</span>
                         <h1 className="fluid-h1 font-serif text-gold leading-tight">Solicitud de Admisión</h1>
                         <p className="mt-6 sm:mt-10 text-dorado-light/40 text-base sm:text-lg md:text-xl font-light italic leading-relaxed max-w-2xl mx-auto">
-                            &ldquo;Pertenecer a la Sociedad es abrazar un legado de distinción, cultura y convivencia que late en Totana desde hace más de un siglo.&rdquo;
+                            &ldquo;Pertenecer a la Sociedad es hoy un acto de mecenazgo: apoyar la cultura viva y preservar un patrimonio que late en Totana desde 1917.&rdquo;
                         </p>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.8, duration: 1.5 }}
+                        className="flex justify-center mt-12"
+                    >
+                        <a
+                            href="/docs/formulario-alta-socio.pdf"
+                            download="Formulario Alta Socio - Gran Casino Totana.pdf"
+                            className="text-[10px] uppercase tracking-[0.25em] text-dorado-primary/40 hover:text-dorado-primary/80 transition-all duration-500 flex items-center gap-3 group px-6 py-3 rounded-full border border-dorado-primary/10 hover:border-dorado-primary/20 bg-dorado-primary/5"
+                        >
+                            <Download size={14} className="group-hover:translate-y-0.5 transition-transform" />
+                            ¿Prefieres el formato físico? Descarga el PDF
+                        </a>
                     </motion.div>
                 </div>
             </section>
@@ -185,10 +201,16 @@ export default function SociosPage() {
                                 Sede Social, Totana · {new Intl.DateTimeFormat("es-ES", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Madrid" }).format(new Date())}
                             </div>
                             <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-                                <PremiumButton variant="outline" className="w-full sm:w-auto gap-3 py-5 px-8">
-                                    <Download size={18} /> Guardar Borrador
-                                </PremiumButton>
-                                <PremiumButton variant="primary" className="w-full sm:w-auto gap-3 px-14 py-5 shadow-2xl">
+                                <a
+                                    href="/docs/formulario-alta-socio.pdf"
+                                    download="Formulario Alta Socio - Gran Casino Totana.pdf"
+                                    className="w-full sm:w-auto"
+                                >
+                                    <PremiumButton variant="outline" type="button" className="w-full gap-3 py-5 px-8">
+                                        <Download size={18} /> Descargar PDF
+                                    </PremiumButton>
+                                </a>
+                                <PremiumButton variant="primary" type="submit" className="w-full sm:w-auto gap-3 px-14 py-5 shadow-2xl">
                                     Enviar Solicitud <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                 </PremiumButton>
                             </div>

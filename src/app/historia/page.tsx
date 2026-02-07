@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { motion } from "framer-motion";
-import { History, Award, BookOpen, ChevronRight, ArrowLeft } from "lucide-react";
+import { History, Award, BookOpen, ChevronRight, ArrowLeft, Eye, Palette, Landmark } from "lucide-react";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import { PremiumCard, PremiumButton } from "@/components/ui/PremiumElements";
@@ -10,27 +10,27 @@ import CasinoLogo from "@/components/ui/CasinoLogo";
 
 const timelineEvents = [
     {
-        year: "1890",
-        title: "Fundación de la Sociedad",
-        description: "Un grupo de ilustres ciudadanos de Totana se reúne para crear un espacio de debate, cultura y recreo.",
+        year: "1917",
+        title: "Génesis y Voluntad",
+        description: "El 29 de noviembre, un grupo de terratenientes y comerciantes funda la Sociedad. En un clima de agitación nacional, nace como un 'santuario' apolítico de recreo civilizado.",
         icon: <CasinoLogo size={24} />,
     },
     {
-        year: "1910",
-        title: "Inauguración de la Sede Actual",
-        description: "Se finaliza la construcción del edificio emblemático en la Plaza de la Constitución, joya del neoclasicismo local.",
+        year: "1935",
+        title: "La Edad Dorada",
+        description: "Esplendor social con grandes orquestas amenizando bailes de Pascua y fin de año, convirtiéndose en el epicentro de las alianzas sociales del municipio.",
         icon: <History className="text-dorado-primary" />,
     },
     {
-        year: "1950",
-        title: "Época Dorada Cultural",
-        description: "El Casino se consolida como el epicentro de las artes, acogiendo conciertos de cámara y recitales literarios de renombre.",
-        icon: <BookOpen className="text-dorado-primary" />,
+        year: "1947",
+        title: "El Renacimiento de Cayuela",
+        description: "Bajo la presidencia del Dr. José Cayuela Meca, se impulsa la gran transformación estética, encargando a Fernando Gamonal la decoración mural y el mobiliario.",
+        icon: <Palette className="text-dorado-primary" />,
     },
     {
-        year: "2015",
-        title: "Declaración de BIC",
-        description: "El edificio es reconocido oficialmente como Bien de Interés Cultural, protegiendo su legado para las futuras generaciones.",
+        year: "2024",
+        title: "Redescubrimiento Artístico",
+        description: "Comienza la recuperación de las pinturas de Gamonal, ocultas durante décadas bajo capas de pintura, devolviendo al Casino su categoría de contenedor artístico.",
         icon: <Award className="text-dorado-primary" />,
     },
 ];
@@ -43,9 +43,9 @@ export default function HistoriaPage() {
             <Navbar />
 
             {/* Hero Section Historia */}
-            <section className="relative min-h-[60svh] md:h-[70vh] flex items-center justify-center pt-24 md:pt-20">
+            <section className="relative min-h-[60svh] md:h-[80vh] flex items-center justify-center pt-24 md:pt-20">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-b from-black-primary/60 via-black-primary to-black-primary z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black-primary/60 via-black-primary/95 to-black-primary z-10" />
                     <Image
                         src="/images/hero/11zon_IMG_9133.webp"
                         alt="Textura histórica del Gran Casino"
@@ -53,45 +53,116 @@ export default function HistoriaPage() {
                         priority
                         sizes="100vw"
                         quality={72}
-                        className="object-cover grayscale opacity-30"
+                        className="object-cover grayscale opacity-20"
                     />
                 </div>
 
-                <div className="relative z-20 text-center px-4 sm:px-6">
+                <div className="relative z-20 text-center px-4 sm:px-6 max-w-5xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.2, ease }}
                     >
-                        <span className="text-dorado-primary uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[11px] sm:text-sm mb-4 block font-bold">Nuestras Raíces</span>
-                        <h1 className="fluid-h1 font-serif text-gold leading-tight">Crónica de un Legado</h1>
+                        <span className="text-dorado-primary uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[11px] sm:text-sm mb-4 block font-bold">Crónica de un Siglo (1917 — 2025)</span>
+                        <h1 className="fluid-h1 font-serif text-gold leading-tight mb-6">Un Legado de Miradas</h1>
+                        <p className="text-dorado-light/60 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+                            Desde el mandato de neutralidad de 1917 hasta su apertura total como eje cultural del siglo XXI.
+                        </p>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Intro Narrative */}
-            <section className="section-visibility fluid-py fluid-px max-w-4xl mx-auto border-y border-dorado-dark/10">
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1.5 }}
-                    className="space-y-8 text-center px-4 sm:px-0"
-                >
-                    <p className="text-xl sm:text-2xl md:text-3xl font-serif text-dorado-light/80 italic leading-relaxed">
-                        &ldquo;Para entender el presente de Totana, es necesario recorrer los pasillos de su Gran Casino, donde cada moldura guarda el eco de un siglo de historia.&rdquo;
-                    </p>
-                    <div className="w-16 h-px bg-dorado-primary mx-auto opacity-40 rounded-full" />
-                    <p className="text-dorado-light/50 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                        Desde su fundación en 1890, el Gran Casino ha sido más que un edificio; ha sido el punto de encuentro de las mentes más brillantes, el escenario de las decisiones más importantes y el hogar de la cultura totanera.
-                    </p>
-                </motion.div>
+            {/* Intro Narrative & Stats Context */}
+            <section className="section-visibility fluid-py fluid-px max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="space-y-6"
+                    >
+                        <h2 className="fluid-h2 font-serif text-crema leading-tight">La Barrera de un Estatus</h2>
+                        <div className="space-y-4 text-dorado-light/60 text-lg leading-relaxed">
+                            <p>
+                                En 1917, pertenecer al Gran Casino era una declaración de éxito. La entrada costaba 25 pesetas: más de una semana de trabajo íntegro para un jornalero de la época.
+                            </p>
+                            <p>
+                                Más que exclusividad, era un compromiso con la cultura y la sociabilidad apolítica, un &ldquo;santuario&rdquo; donde las diferencias partidistas quedaban suspendidas en favor del recreo civilizado.
+                            </p>
+                        </div>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <PremiumCard className="p-8 text-center border-dorado-primary/10">
+                            <div className="text-4xl font-serif text-dorado-primary mb-2">25 pesetas</div>
+                            <div className="text-[10px] uppercase tracking-widest text-dorado-light/40 font-bold">Cuota de Entrada 1917</div>
+                        </PremiumCard>
+                        <PremiumCard className="p-8 text-center border-dorado-primary/10">
+                            <div className="text-4xl font-serif text-dorado-primary mb-2">1,50 pesetas</div>
+                            <div className="text-[10px] uppercase tracking-widest text-dorado-light/40 font-bold">Mensualidad Histórica</div>
+                        </PremiumCard>
+                        <PremiumCard className="p-8 text-center border-dorado-primary/10 sm:col-span-2">
+                            <div className="text-sm italic text-dorado-light/60 leading-relaxed text-center">
+                                &ldquo;Un espacio de transición entre la esfera privada del hogar burgués y la esfera pública.&rdquo;
+                            </div>
+                        </PremiumCard>
+                    </div>
+                </div>
+            </section>
+
+            {/* Architecture: La Pecera */}
+            <section className="section-visibility fluid-py bg-black-soft/30 overflow-hidden border-y border-dorado-dark/5">
+                <div className="max-w-7xl mx-auto fluid-px grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1.2, ease }}
+                        className="aspect-[16/10] rounded-[2.5rem] overflow-hidden border border-dorado-dark/20 relative group shadow-2xl lg:order-last"
+                    >
+                        <Image
+                            src="/images/hero/IMG_9111.webp"
+                            alt="La Pecera del Casino"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            quality={85}
+                            className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black-primary via-transparent to-transparent opacity-80" />
+                        <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10">
+                            <span className="text-dorado-primary text-[10px] uppercase tracking-widest font-bold flex items-center gap-2">
+                                <Eye size={12} /> El Panóptico Social
+                            </span>
+                            <h4 className="text-2xl sm:text-3xl md:text-4xl font-serif text-crema mt-2">La Pecera</h4>
+                        </div>
+                    </motion.div>
+
+                    <div className="space-y-8">
+                        <span className="text-dorado-primary uppercase tracking-[0.3em] text-sm font-bold flex items-center gap-3">
+                            <Landmark size={18} /> Arquitectura del Poder
+                        </span>
+                        <h2 className="fluid-h2 text-crema leading-tight">Ver y ser visto: <br /><span className="text-gold italic">El balcón de Totana</span></h2>
+                        <div className="space-y-4 text-dorado-light/60 leading-relaxed text-base md:text-lg">
+                            <p>
+                                Situado estratégicamente en la esquina del Ayuntamiento, el edificio completa la tríada de poderes locales junto a la Iglesia de Santiago.
+                            </p>
+                            <p>
+                                Su elemento más distintivo, <span className="text-dorado-light italic">La Pecera</span>, actuaba como un escaparate donde la élite observaba el devenir de las gentes —amas de casa, niños y viandantes— desde un remanso de paz iluminado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             {/* Timeline Section */}
             <section className="section-visibility fluid-py fluid-px relative">
                 <div className="max-w-6xl mx-auto relative">
-                    <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-dorado-primary/30 to-transparent hidden md:block" />
+                    <div className="text-center mb-20 space-y-4">
+                        <span className="text-dorado-primary text-xs uppercase tracking-[0.4em] font-bold">Hitos Cronológicos</span>
+                        <h2 className="fluid-h2 font-serif text-crema">Trayectoria Centenaria</h2>
+                    </div>
+
+                    <div className="absolute left-1/2 -translate-x-1/2 top-40 bottom-0 w-px bg-gradient-to-b from-transparent via-dorado-primary/30 to-transparent hidden md:block" />
 
                     <div className="space-y-12 md:space-y-24">
                         {timelineEvents.map((event, index) => (
@@ -106,16 +177,16 @@ export default function HistoriaPage() {
                             >
                                 {/* Year Bubble */}
                                 <div className="absolute left-1/2 -translate-x-1/2 z-20 hidden md:block">
-                                    <div className="w-12 h-12 rounded-full bg-black-primary border border-dorado-primary flex items-center justify-center shadow-[0_0_20px_rgba(201,169,98,0.3)]">
+                                    <div className="w-14 h-14 rounded-full bg-black-primary border border-dorado-primary flex items-center justify-center shadow-[0_0_20px_rgba(201,169,98,0.3)] backdrop-blur-sm">
                                         <span className="text-[10px] font-bold text-dorado-primary">{event.year}</span>
                                     </div>
                                 </div>
 
                                 {/* Content Side */}
                                 <div className="w-full md:w-[45%]">
-                                    <PremiumCard className="hover:border-dorado-primary/40 p-6 sm:p-8">
+                                    <PremiumCard className="hover:border-dorado-primary/40 p-6 sm:p-10 bg-black-soft/40 backdrop-blur-sm">
                                         <div className="flex items-center gap-4 mb-4">
-                                            <div className="p-3 rounded-2xl bg-black-soft border border-dorado-dark/20">
+                                            <div className="p-3 rounded-2xl bg-black-soft border border-dorado-dark/20 text-dorado-primary">
                                                 {event.icon}
                                             </div>
                                             <div className="flex flex-col md:hidden">
@@ -123,8 +194,8 @@ export default function HistoriaPage() {
                                                 <h3 className="text-xl font-serif text-crema">{event.title}</h3>
                                             </div>
                                         </div>
-                                        <h3 className="text-xl sm:text-2xl font-serif text-crema mb-3 hidden md:block">{event.title}</h3>
-                                        <p className="text-dorado-light/40 leading-relaxed text-sm md:text-base">
+                                        <h3 className="text-xl sm:text-2xl font-serif text-crema mb-3 hidden md:block italic tracking-tight">{event.title}</h3>
+                                        <p className="text-dorado-light/40 leading-relaxed text-base">
                                             {event.description}
                                         </p>
                                     </PremiumCard>
@@ -138,75 +209,74 @@ export default function HistoriaPage() {
                 </div>
             </section>
 
-            {/* Building Detail Section */}
-            <section className="section-visibility fluid-py bg-black-soft/20 overflow-hidden">
-                <div className="max-w-7xl mx-auto fluid-px grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
+            {/* Gamonal: The Hidden Treasure */}
+            <section className="section-visibility fluid-py bg-black-primary relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-dorado-primary/20 to-transparent" />
+
+                <div className="max-w-5xl mx-auto fluid-px text-center space-y-12">
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 1.2, ease }}
-                        className="aspect-[4/3] rounded-[2.5rem] overflow-hidden border border-dorado-dark/20 relative group shadow-2xl"
+                        className="space-y-4"
                     >
-                        <Image
-                            src="/images/hero/IMG_9111.webp"
-                            alt="Casino Architecture"
-                            fill
-                            sizes="(max-width: 1024px) 100vw, 50vw"
-                            quality={72}
-                            className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black-primary via-transparent to-transparent" />
-                        <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10">
-                            <span className="text-dorado-primary text-[10px] uppercase tracking-widest font-bold">Detalle Arquitectónico</span>
-                            <h4 className="text-xl sm:text-2xl md:text-3xl font-serif text-crema">Bóveda de los Espejos</h4>
-                        </div>
+                        <span className="text-dorado-primary uppercase tracking-[0.4em] text-xs font-bold">Patrimonio Artístico</span>
+                        <h2 className="fluid-h2 font-serif text-crema italic">El Tesoro Oculto de Gamonal</h2>
                     </motion.div>
 
-                    <div className="space-y-8">
-                        <span className="text-dorado-primary uppercase tracking-[0.3em] text-sm font-bold">El Inmueble</span>
-                        <h2 className="fluid-h2 text-crema leading-tight">Un Patrimonio Declarado BIC</h2>
-                        <div className="space-y-4 text-dorado-light/60 leading-relaxed text-base md:text-lg">
-                            <p>
-                                El edificio principal, de estilo ecléctico con influencias neoclásicas, destaca por su imponente fachada orientada a la Plaza de la Constitución. Sus balcones de forja y su decoración de escayola son únicos en la Región de Murcia.
-                            </p>
-                            <p>
-                                En su interior, el Salón de Baile y la Biblioteca contienen volúmenes que datan de finales del siglo XIX, conservados con meticuloso cuidado por los sucesivos directores de la sociedad.
+                    <div className="relative aspect-[21/9] rounded-[2rem] overflow-hidden border border-dorado-primary/10 group shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                        <Image
+                            src="/images/hero/11zon_IMG_9124.webp"
+                            alt="Salón Modernista con pinturas de Gamonal"
+                            fill
+                            className="object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black-primary via-black-primary/20 to-transparent" />
+
+                        <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center bg-black-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 backdrop-blur-[2px]">
+                            <p className="text-dorado-light/80 text-lg md:text-xl max-w-2xl font-light leading-relaxed">
+                                En 1947, Fernando Gamonal diseñó una obra total: murales y mobiliario que fueron cubiertos por capas de pintura en los años 60. Hoy, la restauración vuelve a sacar a la luz su genio.
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-6 sm:gap-8 pt-8 border-t border-dorado-dark/10">
-                            <div>
-                                <div className="text-3xl sm:text-4xl font-serif text-dorado-primary">1910</div>
-                                <div className="text-[10px] uppercase tracking-widest text-dorado-light/30">Año Construcción</div>
-                            </div>
-                            <div>
-                                <div className="text-3xl sm:text-4xl font-serif text-dorado-primary">Eclecticismo</div>
-                                <div className="text-[10px] uppercase tracking-widest text-dorado-light/30">Estilo Artístico</div>
-                            </div>
+                        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 group-hover:opacity-0 transition-opacity flex flex-col items-center gap-2">
+                            <div className="text-dorado-primary text-[10px] uppercase tracking-widest font-bold">Pasa el cursor para revelar</div>
+                            <div className="w-1 h-6 bg-gradient-to-b from-dorado-primary to-transparent" />
                         </div>
                     </div>
+
+                    <p className="text-dorado-light/40 text-lg md:text-xl font-light italic leading-relaxed max-w-3xl mx-auto">
+                        &ldquo;Elevando la categoría del inmueble de lugar de reunión a contenedor de patrimonio artístico.&rdquo;
+                    </p>
                 </div>
             </section>
 
-            <section className="section-visibility fluid-py fluid-px">
-                <div className="max-w-4xl mx-auto rounded-[2.5rem] p-8 sm:p-12 md:p-20 text-center relative overflow-hidden border border-dorado-primary/10 bg-gradient-to-br from-black-soft to-black-primary shadow-2xl">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-dorado-primary/5 blur-[100px] -mr-32 -mt-32" />
-                    <div className="relative z-10 space-y-8">
-                        <h2 className="fluid-h2 text-crema">Explora el Archivo Digital</h2>
-                        <p className="text-dorado-light/50 text-lg md:text-xl font-light italic">
-                            &ldquo;Miles de documentos, fotografías y actas que narran la vida social de tres siglos.&rdquo;
+            {/* Contemporary Transition */}
+            <section className="section-visibility fluid-py fluid-px text-center">
+                <div className="max-w-4xl mx-auto space-y-12">
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        className="space-y-6"
+                    >
+                        <h2 className="fluid-h2 font-serif text-crema">Del Club Privado al Eje Cultural</h2>
+                        <p className="text-dorado-light/50 text-lg md:text-xl font-light leading-relaxed">
+                            Hoy, el Casino ha roto las barreras psicológicas de su pasado. Bajo un mandato de apertura, sus salones vibran con presentaciones de cómics, recitales poéticos y actos reivindicativos como el festival &ldquo;Que vivan las mujeres&rdquo;.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-8">
+                    </motion.div>
+
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+                        <Link href="/cultura">
                             <PremiumButton variant="primary" className="w-full sm:w-auto px-10">
-                                Consulta Histórica <ChevronRight size={20} />
+                                Explorar Agenda Cultural <ChevronRight size={20} />
                             </PremiumButton>
-                            <Link href="/" className="w-full sm:w-auto">
-                                <PremiumButton variant="outline" className="w-full px-10">
-                                    <ArrowLeft size={18} className="mr-2" /> Volver al Inicio
-                                </PremiumButton>
-                            </Link>
-                        </div>
+                        </Link>
+                        <Link href="/">
+                            <PremiumButton variant="outline" className="w-full sm:w-auto px-10">
+                                <ArrowLeft size={18} className="mr-2" /> Inicio
+                            </PremiumButton>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -218,7 +288,5 @@ export default function HistoriaPage() {
                 </div>
             </footer>
         </main>
-
     );
 }
-

@@ -69,7 +69,7 @@ export default function Home() {
               transition={{ duration: 1.2, delay: 0.5, ease }}
               className="text-base sm:text-lg md:text-2xl text-dorado-light/40 font-sans max-w-2xl md:max-w-3xl mx-auto leading-relaxed italic px-6"
             >
-              Un rincón de distinción donde el tiempo se detiene y la cultura florece desde 1890.
+              Un rincón de distinción donde el tiempo se detiene y la cultura florece desde 1917.
             </motion.p>
           </div>
 
@@ -165,13 +165,13 @@ export default function Home() {
               </div>
 
               <p className="text-dorado-light/60 text-base md:text-xl leading-relaxed font-light px-2 sm:px-0">
-                Fundado en la plenitud del siglo XIX, el Gran Casino de Totana ha sido el faro de la vida social y cultural de la zona.
+                Fundado en 1917, el Gran Casino de Totana ha sido el faro de la vida social y cultural de la zona.
                 Sus salones han sido testigos de los momentos más trascendentales de nuestra historia local.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 py-10 border-y border-dorado-dark/10">
                 <div className="flex flex-col items-center sm:items-start">
-                  <div className="text-4xl sm:text-5xl font-serif text-dorado-primary leading-none mb-2">1890</div>
+                  <div className="text-4xl sm:text-5xl font-serif text-dorado-primary leading-none mb-2">1917</div>
                   <div className="text-[10px] uppercase tracking-[0.3em] text-dorado-light/30 font-bold">Fundación</div>
                 </div>
                 <div className="flex flex-col items-center sm:items-start">
