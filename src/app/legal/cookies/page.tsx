@@ -27,7 +27,7 @@ export default function PoliticaCookies() {
                 >
                     <Cookie size={32} className="text-dorado-primary" />
                 </motion.div>
-                <h1 className="text-4xl md:text-6xl font-serif text-gold italic">Política de Cookies</h1>
+                <h1 className="text-4xl md:text-6xl font-serif text-gold">Política de Cookies</h1>
                 <p className="text-lg md:text-xl text-dorado-light/60 font-light max-w-2xl mx-auto leading-relaxed">
                     Utilizamos cookies para garantizar que disfrute de una experiencia de navegación premium y segura en nuestro portal digital.
                 </p>

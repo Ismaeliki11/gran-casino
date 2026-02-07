@@ -33,9 +33,7 @@ export default function Footer() {
                             Sociedad Cultural y Recreativa fundada en 1890. Un legado de distinción, cultura y vida social en el corazón de Totana.
                         </p>
                         <div className="flex gap-4 pt-2">
-                            <SocialLink href="#" icon={<Facebook size={18} />} label="Facebook" />
-                            <SocialLink href="#" icon={<Instagram size={18} />} label="Instagram" />
-                            <SocialLink href="#" icon={<Twitter size={18} />} label="Twitter" />
+                            <SocialLink href="https://www.instagram.com/gran_casino_totana/?hl=es" icon={<Instagram size={18} />} label="Instagram" />
                         </div>
                     </div>
 

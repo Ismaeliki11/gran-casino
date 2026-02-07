@@ -149,7 +149,7 @@ export default function TerminosCondiciones() {
                 >
                     <FileText size={32} className="text-dorado-primary" />
                 </motion.div>
-                <h1 className="text-4xl md:text-6xl font-serif text-gold italic">Términos y Condiciones</h1>
+                <h1 className="text-4xl md:text-6xl font-serif text-gold">Términos Y Condiciones</h1>
                 <p className="text-lg md:text-xl text-dorado-light/60 font-light max-w-2xl mx-auto leading-relaxed">
                     Las reglas de juego claras son la base de la confianza. Aquí explicamos cómo funciona nuestra plataforma.
                 </p>

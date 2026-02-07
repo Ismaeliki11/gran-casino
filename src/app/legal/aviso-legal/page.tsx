@@ -50,7 +50,7 @@ export default function AvisoLegal() {
                 >
                     <Info size={32} className="text-dorado-primary" />
                 </motion.div>
-                <h1 className="text-4xl md:text-6xl font-serif text-gold italic">Aviso Legal</h1>
+                <h1 className="text-4xl md:text-6xl font-serif text-gold">Aviso Legal</h1>
                 <p className="text-lg md:text-xl text-dorado-light/60 font-light max-w-2xl mx-auto leading-relaxed">
                     Información legal sobre la titularidad y condiciones de uso de este portal web, en cumplimiento de la ley LSSI-CE.
                 </p>

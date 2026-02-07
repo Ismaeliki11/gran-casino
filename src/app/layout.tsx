@@ -28,11 +28,18 @@ export const metadata: Metadata = {
     title: "Gran Casino de Totana - Tradición y Excelencia desde 1890",
     description: "Donde la tradición centenaria se encuentra con la elegancia del siglo XXI.",
     siteName: "Gran Casino de Totana",
+    images: [{
+      url: "/images/brand/logo-casino.png",
+      width: 800,
+      height: 800,
+      alt: "Gran Casino de Totana Logo",
+    }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Gran Casino de Totana",
     description: "Sociedad Cultural y Recreativa desde 1890.",
+    images: ["/images/brand/logo-casino.png"],
   },
   icons: {
     icon: "/images/brand/logo-casino.png",

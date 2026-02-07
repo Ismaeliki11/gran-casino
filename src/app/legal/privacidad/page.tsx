@@ -80,7 +80,7 @@ export default function PoliticaPrivacidad() {
                 >
                     <Lock size={32} className="text-dorado-primary" />
                 </motion.div>
-                <h1 className="text-4xl md:text-6xl font-serif text-gold italic">Política de Privacidad</h1>
+                <h1 className="text-4xl md:text-6xl font-serif text-gold">Política de Privacidad</h1>
                 <p className="text-lg md:text-xl text-dorado-light/60 font-light max-w-2xl mx-auto leading-relaxed">
                     Transparencia y seguridad en el tratamiento de sus datos. Su confianza es nuestro mayor patrimonio.
                 </p>
