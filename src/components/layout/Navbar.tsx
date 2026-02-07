@@ -1,4 +1,6 @@
-﻿import { useState, useEffect, useRef } from "react";
+﻿"use client";
+
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe, Bell } from "lucide-react";
 import { cn } from "@/lib/utils";

@@ -48,6 +48,8 @@ export const viewport: Viewport = {
 };
 
 import BottomNav from "@/components/layout/BottomNav";
+import Footer from "@/components/layout/Footer";
+import CookieConsent from "@/components/ui/CookieConsent";
 
 export default function RootLayout({
   children,
@@ -60,7 +62,9 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} antialiased`}
       >
         {children}
+        <Footer />
         <BottomNav />
+        <CookieConsent />
       </body>
     </html>
   );

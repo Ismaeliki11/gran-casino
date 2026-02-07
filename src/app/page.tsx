@@ -269,30 +269,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="section-visibility py-16 md:py-24 border-t border-dorado-dark/10 bg-black-primary">
-        <div className="max-w-7xl mx-auto fluid-px flex flex-col items-center space-y-12">
-          <div className="flex items-center gap-3">
-            <CasinoLogo size={32} />
-            <span className="font-serif text-xl sm:text-2xl tracking-tighter text-dorado-light">Gran Casino de Totana</span>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-12 text-center">
-            {["Privacidad", "Cookies", "Estatutos", "Transparencia"].map((item) => (
-              <Link key={item} href="#" className="text-[10px] uppercase tracking-[0.2em] text-dorado-light/30 hover:text-dorado-primary transition-colors font-medium">
-                {item}
-              </Link>
-            ))}
-          </div>
-
-          <div className="flex flex-col items-center gap-4">
-            <div className="text-[10px] uppercase tracking-[0.4em] text-dorado-light/10 text-center leading-relaxed" suppressHydrationWarning>
-              © {new Date().getFullYear()} – Excelentísima Sociedad del Gran Casino de Totana
-            </div>
-            <div className="h-px w-12 bg-dorado-primary/20" />
-          </div>
-        </div>
-      </footer>
 
     </main>
   );
