@@ -64,7 +64,7 @@ export default function HistoriaPage() {
                         transition={{ duration: 1.2, ease }}
                     >
                         <span className="text-dorado-primary uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[11px] sm:text-sm mb-4 block font-bold">Crónica de un Siglo (1917 — 2025)</span>
-                        <h1 className="fluid-h1 font-serif text-gold leading-tight mb-6">Un Legado de Miradas</h1>
+                        <h1 className="fluid-h1 font-serif text-gold leading-tight mb-6 pb-4 -mb-4">Un Legado de Miradas</h1>
                         <p className="text-dorado-light/60 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
                             Desde el mandato de neutralidad de 1917 hasta su apertura total como eje cultural del siglo XXI.
                         </p>
@@ -157,12 +157,16 @@ export default function HistoriaPage() {
             {/* Timeline Section */}
             <section className="section-visibility fluid-py fluid-px relative">
                 <div className="max-w-6xl mx-auto relative">
-                    <div className="text-center mb-20 space-y-4">
+                    <div className="text-center mb-16 md:mb-20 space-y-4">
                         <span className="text-dorado-primary text-xs uppercase tracking-[0.4em] font-bold">Hitos Cronológicos</span>
                         <h2 className="fluid-h2 font-serif text-crema">Trayectoria Centenaria</h2>
                     </div>
 
-                    <div className="absolute left-1/2 -translate-x-1/2 top-40 bottom-0 w-px bg-gradient-to-b from-transparent via-dorado-primary/30 to-transparent hidden md:block" />
+                    {/* Desktop Center Line */}
+                    <div className="absolute left-1/2 -translate-x-1/2 top-40 bottom-0 w-px bg-gradient-to-b from-transparent via-dorado-primary/20 to-transparent hidden md:block" />
+
+                    {/* Mobile Left Line */}
+                    <div className="absolute left-8 top-40 bottom-0 w-px bg-gradient-to-b from-transparent via-dorado-primary/20 to-transparent md:hidden" />
 
                     <div className="space-y-12 md:space-y-24">
                         {timelineEvents.map((event, index) => (
@@ -172,32 +176,30 @@ export default function HistoriaPage() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 1.2, ease, opacity: { duration: 0.8 } }}
-                                className={`smooth-gpu relative flex flex-col items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                                className={`smooth-gpu relative flex flex-col items-start md:items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                                     } gap-6 md:gap-0`}
                             >
-                                {/* Year Bubble */}
-                                <div className="absolute left-1/2 -translate-x-1/2 z-20 hidden md:block">
-                                    <div className="w-14 h-14 rounded-full bg-black-primary border border-dorado-primary flex items-center justify-center shadow-[0_0_20px_rgba(201,169,98,0.3)] backdrop-blur-sm">
-                                        <span className="text-[10px] font-bold text-dorado-primary">{event.year}</span>
+                                {/* Year Bubble - Desktop: Center, Mobile: Left */}
+                                <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 z-20">
+                                    <div className="w-16 h-16 rounded-full bg-black-primary border border-dorado-primary/30 flex items-center justify-center shadow-[0_0_30px_rgba(0,0,0,0.8)] backdrop-blur-md">
+                                        <span className="text-[10px] font-bold text-dorado-primary/80">{event.year}</span>
                                     </div>
                                 </div>
 
                                 {/* Content Side */}
-                                <div className="w-full md:w-[45%]">
+                                <div className="w-full md:w-[45%] pl-20 md:pl-0">
                                     <PremiumCard className="hover:border-dorado-primary/40 p-6 sm:p-10 bg-black-soft/40 backdrop-blur-sm">
-                                        <div className="flex items-center gap-4 mb-4">
-                                            <div className="p-3 rounded-2xl bg-black-soft border border-dorado-dark/20 text-dorado-primary">
-                                                {event.icon}
+                                        <div className="flex flex-col gap-5">
+                                            <div className="flex items-center gap-4">
+                                                <div className="p-3 rounded-2xl bg-black-soft border border-dorado-dark/20 text-dorado-primary">
+                                                    {event.icon}
+                                                </div>
+                                                <h3 className="text-xl sm:text-2xl font-serif text-crema italic tracking-tight">{event.title}</h3>
                                             </div>
-                                            <div className="flex flex-col md:hidden">
-                                                <span className="text-dorado-primary font-bold tracking-widest text-xs uppercase">{event.year}</span>
-                                                <h3 className="text-xl font-serif text-crema">{event.title}</h3>
-                                            </div>
+                                            <p className="text-dorado-light/40 leading-relaxed text-sm md:text-base">
+                                                {event.description}
+                                            </p>
                                         </div>
-                                        <h3 className="text-xl sm:text-2xl font-serif text-crema mb-3 hidden md:block italic tracking-tight">{event.title}</h3>
-                                        <p className="text-dorado-light/40 leading-relaxed text-base">
-                                            {event.description}
-                                        </p>
                                     </PremiumCard>
                                 </div>
 
@@ -224,28 +226,46 @@ export default function HistoriaPage() {
                         <h2 className="fluid-h2 font-serif text-crema italic">El Tesoro Oculto de Gamonal</h2>
                     </motion.div>
 
-                    <div className="relative aspect-[21/9] rounded-[2rem] overflow-hidden border border-dorado-primary/10 group shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                    <div
+                        className="relative aspect-video md:aspect-[21/9] rounded-[2rem] overflow-hidden border border-dorado-primary/10 group shadow-[0_0_50px_rgba(0,0,0,0.5)] cursor-pointer"
+                        onClick={(e) => {
+                            const overlay = e.currentTarget.querySelector('.gamonal-overlay');
+                            const prompt = e.currentTarget.querySelector('.gamonal-prompt');
+                            const image = e.currentTarget.querySelector('.gamonal-image');
+
+                            if (window.innerWidth < 1024) {
+                                overlay?.classList.toggle('opacity-0');
+                                overlay?.classList.toggle('opacity-100');
+                                prompt?.classList.toggle('opacity-0');
+                                image?.classList.toggle('grayscale');
+                                image?.classList.toggle('grayscale-0');
+                            }
+                        }}
+                    >
                         <Image
                             src="/images/hero/11zon_IMG_9124.webp"
                             alt="Salón Modernista con pinturas de Gamonal"
                             fill
-                            className="object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                            className="gamonal-image object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black-primary via-black-primary/20 to-transparent" />
 
-                        <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center bg-black-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700 backdrop-blur-[2px]">
-                            <p className="text-dorado-light/80 text-lg md:text-xl max-w-2xl font-light leading-relaxed">
+                        <div className="gamonal-overlay absolute inset-0 flex flex-col items-center justify-center p-6 md:p-8 text-center bg-black-primary/60 lg:bg-black-primary/40 opacity-0 lg:group-hover:opacity-100 transition-all duration-700 backdrop-blur-[2px]">
+                            <p className="text-dorado-light/90 md:text-dorado-light/80 text-sm sm:text-base md:text-xl max-w-2xl font-light leading-relaxed">
                                 En 1947, Fernando Gamonal diseñó una obra total: murales y mobiliario que fueron cubiertos por capas de pintura en los años 60. Hoy, la restauración vuelve a sacar a la luz su genio.
                             </p>
                         </div>
 
-                        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 group-hover:opacity-0 transition-opacity flex flex-col items-center gap-2">
-                            <div className="text-dorado-primary text-[10px] uppercase tracking-widest font-bold">Pasa el cursor para revelar</div>
+                        <div className="gamonal-prompt absolute bottom-6 left-1/2 -translate-x-1/2 lg:group-hover:opacity-0 transition-opacity flex flex-col items-center gap-2">
+                            <div className="text-dorado-primary text-[10px] uppercase tracking-widest font-bold">
+                                <span className="hidden lg:inline">Pasa el cursor</span>
+                                <span className="lg:hidden text-xs">Pulsa</span> para revelar
+                            </div>
                             <div className="w-1 h-6 bg-gradient-to-b from-dorado-primary to-transparent" />
                         </div>
                     </div>
 
-                    <p className="text-dorado-light/40 text-lg md:text-xl font-light italic leading-relaxed max-w-3xl mx-auto">
+                    <p className="text-dorado-light/40 text-base md:text-xl font-light italic leading-relaxed max-w-3xl mx-auto px-4">
                         &ldquo;Elevando la categoría del inmueble de lugar de reunión a contenedor de patrimonio artístico.&rdquo;
                     </p>
                 </div>
@@ -295,6 +315,25 @@ export default function HistoriaPage() {
                                 La institución se enfrentó a la "pena de extinción", riesgo que ha motivado el giro estratégico actual hacia la apertura cultural definitiva del siglo XXI.
                             </p>
                         </PremiumAccordion>
+                    </div>
+                </div>
+            </section>
+
+            {/* Deep Dive Call to Action */}
+            <section className="section-visibility fluid-py fluid-px text-center bg-dorado-primary/5 border-y border-dorado-primary/10">
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <BookOpen size={40} className="text-dorado-primary mx-auto mb-4" />
+                    <h2 className="fluid-h2 font-serif text-gold">¿Deseas profundizar más?</h2>
+                    <p className="text-dorado-light/60 text-lg md:text-xl font-light leading-relaxed">
+                        Hemos preparado un informe detallado que recorre desde el asociacionismo de la Restauración hasta el redescubrimiento de los murales de Gamonal.
+                        Toda la historia, sin cortes.
+                    </p>
+                    <div className="pt-4">
+                        <Link href="/historia/completa">
+                            <PremiumButton variant="primary" className="px-12">
+                                Leer Crónica Completa <ChevronRight size={20} className="ml-2" />
+                            </PremiumButton>
+                        </Link>
                     </div>
                 </div>
             </section>
