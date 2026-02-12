@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Facebook, Instagram, Clock, Send } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import { PremiumButton } from "@/components/ui/PremiumElements";
+import Image from "next/image";
 
 export default function ContactoPage() {
     const ease = [0.25, 0.1, 0.25, 1.0] as const;
@@ -13,25 +14,50 @@ export default function ContactoPage() {
             <Navbar />
 
             {/* Hero Editorial */}
-            <section className="relative pt-32 md:pt-40 pb-14 md:pb-20 fluid-px overflow-hidden">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full opacity-10 pointer-events-none">
-                    <div className="absolute top-[10%] right-[5%] w-96 h-96 bg-dorado-primary blur-[110px]" />
-                    <div className="absolute bottom-[10%] left-[5%] w-96 h-96 bg-dorado-dark blur-[110px]" />
+            <section className="relative min-h-[100svh] flex flex-col items-center justify-center fluid-px pt-24 pb-12 overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 bg-gradient-to-b from-black-primary/40 via-black-primary/80 to-black-primary z-10" />
+                    <motion.div
+                        initial={{ scale: 1.1, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 0.5 }}
+                        transition={{ duration: 2.5, ease: [0.25, 0.1, 0.25, 1.0] }}
+                        className="absolute inset-0"
+                    >
+                        <Image
+                            src="/images/hero/11zon_IMG_9138.webp"
+                            alt="Vista desde el Gran Casino"
+                            fill
+                            priority
+                            sizes="100vw"
+                            quality={85}
+                            className="object-cover img-premium"
+                        />
+                    </motion.div>
                 </div>
 
-                <div className="max-w-7xl mx-auto relative z-10 text-center space-y-8">
+                <div className="relative z-20 text-center space-y-8 md:space-y-12">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.2, ease }}
+                        transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1.0] }}
+                        className="space-y-6"
                     >
-                        <span className="text-dorado-primary text-[10px] sm:text-xs uppercase tracking-[0.4em] sm:tracking-[0.8em] font-bold block mb-4">Contacto Institucional</span>
+                        <span className="text-dorado-primary text-[10px] sm:text-sm uppercase tracking-[0.35em] sm:tracking-[0.8em] font-bold">Asociación Cultural · Contacto Institucional</span>
                         <h1 className="fluid-h1 font-serif text-gold leading-none lowercase italic -tracking-[0.05em]">
                             distinción
                         </h1>
-                        <p className="mt-8 max-w-2xl mx-auto text-dorado-light/40 text-base sm:text-lg md:text-xl font-light italic leading-relaxed px-4">
+                        <p className="max-w-xl text-dorado-light/40 text-base sm:text-lg md:text-xl font-light leading-relaxed px-4 mx-auto italic">
                             &ldquo;Para cualquier consulta institucional, solicitud de eventos o gestión de socios, estamos a su entera disposición en el centro histórico de Totana.&rdquo;
                         </p>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1, duration: 1.5 }}
+                        className="flex flex-col items-center gap-6"
+                    >
+                        <div className="w-px h-16 md:h-24 bg-gradient-to-b from-dorado-primary/0 via-dorado-primary to-dorado-primary/0 animate-pulse" />
                     </motion.div>
                 </div>
             </section>

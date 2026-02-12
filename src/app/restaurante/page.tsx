@@ -66,28 +66,38 @@ export default function Restaurante() {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-                {/* Background - Using a placeholder or existing image if relevant */}
+            <section className="relative min-h-[60svh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+                {/* Background */}
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-black-primary/20 z-10" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black-primary/40 via-transparent to-black-primary/80 z-10" />
-                    <Image
-                        src="/images/hero/IMG_9120.webp"
-                        alt="Salón del Restaurante"
-                        fill
-                        className="object-cover img-premium"
-                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black-primary/40 via-black-primary/80 to-black-primary z-10" />
+                    <motion.div
+                        initial={{ scale: 1.1, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 0.65 }}
+                        transition={{ duration: 2.5, ease: [0.25, 0.1, 0.25, 1.0] }}
+                        className="absolute inset-0"
+                    >
+                        <Image
+                            src="/images/hero/IMG_9120.webp"
+                            alt="Salón del Restaurante"
+                            fill
+                            priority
+                            className="object-cover img-premium"
+                        />
+                    </motion.div>
                 </div>
 
                 <div className="relative z-20 text-center max-w-4xl mx-auto px-6">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1.0] }}
                     >
-                        <h1 className="fluid-h1 font-serif text-dorado-light mb-6">Gastro Club</h1>
-                        <p className="text-xl md:text-2xl text-crema/80 font-light max-w-2xl mx-auto leading-relaxed">
-                            Donde la tradición culinaria murciana se encuentra con la elegancia de nuestros salones centenarios.
+                        <span className="text-dorado-primary text-[10px] sm:text-sm uppercase tracking-[0.35em] sm:tracking-[0.8em] font-bold mb-4 block">Experiencia Culinaria Centenaria</span>
+                        <h1 className="fluid-h1 font-serif text-gold leading-none lowercase italic -tracking-[0.05em] mb-6">
+                            gastro club
+                        </h1>
+                        <p className="text-lg md:text-2xl text-dorado-light/40 font-light max-w-2xl mx-auto leading-relaxed italic">
+                            &ldquo;Donde la tradición culinaria murciana se encuentra con la elegancia de nuestros salones centenarios.&rdquo;
                         </p>
                     </motion.div>
                 </div>

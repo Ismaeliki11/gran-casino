@@ -68,7 +68,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.2, delay: 0.5, ease }}
-              className="text-base sm:text-lg md:text-2xl text-dorado-light/40 font-sans max-w-2xl md:max-w-3xl mx-auto leading-relaxed italic px-6"
+              className="text-base sm:text-lg md:text-2xl text-dorado-light/85 font-sans max-w-2xl md:max-w-3xl mx-auto leading-relaxed italic px-6"
             >
               Un rincón de distinción donde el tiempo se detiene y la cultura florece desde 1917.
             </motion.p>

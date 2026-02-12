@@ -96,7 +96,7 @@ export default function HeroCarousel() {
                         <h3 className="text-xl sm:text-2xl md:text-4xl font-serif text-crema mb-2 leading-tight">
                             {SLIDES[currentIndex].title}
                         </h3>
-                        <p className="text-dorado-light/60 text-xs sm:text-sm md:text-base font-light italic">
+                        <p className="text-dorado-light/70 text-xs sm:text-sm md:text-base font-light italic">
                             {SLIDES[currentIndex].description}
                         </p>
                     </motion.div>
@@ -117,9 +117,10 @@ export default function HeroCarousel() {
                 ))}
             </div>
 
-            {/* Premium Vignetado y Gradientes - Softer to let images breathe */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black-primary/40 via-transparent to-black-primary/10 z-20" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black-primary/5 via-transparent to-black-primary/5 z-20" />
+            {/* Premium Vignetado y Gradientes - Slightly darker to help text contrast */}
+            <div className="absolute inset-0 bg-black-primary/45 backdrop-blur-[4px] z-20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black-primary/80 via-transparent to-black-primary/40 z-20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black-primary/40 via-transparent to-black-primary/20 z-20" />
 
             {/* Reflejos de luz sutiles */}
             <div className="absolute inset-0 opacity-30 z-20 pointer-events-none">
