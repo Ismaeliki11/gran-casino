@@ -116,8 +116,8 @@ h6 {
   width: 200%;
   height: 200%;
   background: radial-gradient(circle at center,
-      rgba(201, 169, 98, 0.08) 0%,
-      rgba(166, 139, 74, 0.03) 25%,
+      rgba(201, 169, 98, 0.12) 0%,
+      rgba(166, 139, 74, 0.05) 25%,
       transparent 50%);
   pointer-events: none;
   filter: blur(42px);
@@ -144,10 +144,10 @@ h6 {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 55%),
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 55%),
     repeating-linear-gradient(45deg,
-      rgba(255, 255, 255, 0.01) 0px,
-      rgba(255, 255, 255, 0.01) 1px,
+      rgba(255, 255, 255, 0.02) 0px,
+      rgba(255, 255, 255, 0.02) 1px,
       transparent 1px,
       transparent 4px);
   opacity: 0.02;

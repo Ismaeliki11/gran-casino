@@ -52,8 +52,8 @@ export default function HistoriaPage() {
                         fill
                         priority
                         sizes="100vw"
-                        quality={72}
-                        className="object-cover grayscale opacity-20"
+                        quality={85}
+                        className="object-cover opacity-45"
                     />
                 </div>
 
@@ -126,7 +126,7 @@ export default function HistoriaPage() {
                             fill
                             sizes="(max-width: 1024px) 100vw, 50vw"
                             quality={85}
-                            className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000"
+                            className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black-primary via-transparent to-transparent opacity-80" />
                         <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10">
@@ -246,7 +246,7 @@ export default function HistoriaPage() {
                             src="/images/hero/11zon_IMG_9124.webp"
                             alt="Salón Modernista con pinturas de Gamonal"
                             fill
-                            className="gamonal-image object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+                            className="gamonal-image object-cover opacity-80 group-hover:scale-105 transition-all duration-1000"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black-primary via-black-primary/20 to-transparent" />
 
@@ -271,9 +271,10 @@ export default function HistoriaPage() {
                 </div>
             </section>
 
-            {/* Dossier de Investigación Histórica */}
-            <section className="section-visibility fluid-py fluid-px bg-black-soft/10 border-t border-dorado-dark/5">
-                <div className="max-w-4xl mx-auto space-y-12">
+            {/* Dossier de Investigación Histórica - Lighter Background for readability */}
+            <section className="section-visibility fluid-py fluid-px bg-crema-paper/5 border-t border-dorado-dark/5 backdrop-blur-sm relative">
+                <div className="absolute inset-0 bg-gradient-to-b from-black-primary/50 to-transparent pointer-events-none" />
+                <div className="max-w-4xl mx-auto space-y-12 relative z-10">
                     <div className="text-center space-y-4 mb-12">
                         <span className="text-dorado-primary text-xs uppercase tracking-[0.4em] font-bold">Investigación Exhaustiva</span>
                         <h2 className="fluid-h2 font-serif text-crema italic">Archivos y Crónicas</h2>
@@ -281,37 +282,37 @@ export default function HistoriaPage() {
 
                     <div className="space-y-4">
                         <PremiumAccordion title="El Fenómeno del Asociacionismo">
-                            <p>
+                            <p className="text-crema/80">
                                 Para comprender la magnitud de la Sociedad Gran Casino de Totana, es imperativo situar su nacimiento dentro del asociacionismo recreativo que floreció en España entre finales del s. XIX y principios del XX.
                             </p>
-                            <p>
+                            <p className="text-crema/80">
                                 Estas instituciones actuaban como contrapesos a las estructuras tradicionales de poder representadas por la Iglesia y el Ayuntamiento, creando un microcosmos donde se tejían las redes de influencia comercial y social del municipio.
                             </p>
                         </PremiumAccordion>
 
                         <PremiumAccordion title="El Mandato de Neutralidad de 1917">
-                            <p>
+                            <p className="text-crema/80">
                                 La fundación se formalizó el 29 de noviembre de 1917, un año de gran convulsión social en España. A diferencia de otros casinos de la época, a menudo vinculados a partidos políticos específicos, el Gran Casino nació con una vocación explícitamente apolítica.
                             </p>
-                            <p>
+                            <p className="text-crema/80">
                                 El acta fundacional enfatizaba una sociedad donde imperara la "independencia política", buscando alejarse de las luchas de confesiones de carácter partidista para crear un "santuario" de ocio y cohesión de clase.
                             </p>
                         </PremiumAccordion>
 
                         <PremiumAccordion title="Arquitectura y Simbolismo Urbano">
-                            <p>
+                            <p className="text-crema/80">
                                 La ubicación en la Calle Vidal Abarca, número 2, no es casual. Ocupa el corazón neurálgico de Totana, completando el triángulo de poder junto al Ayuntamiento y la Iglesia de Santiago.
                             </p>
-                            <p>
+                            <p className="text-crema/80">
                                 Su arquitectura responde a la tipología del casino burgués, adaptada a la escala de una ciudad media agraria, destacando su salón modernista como centro y eje de la sociedad.
                             </p>
                         </PremiumAccordion>
 
                         <PremiumAccordion title="El Declive y Riesgo de Extinción">
-                            <p>
+                            <p className="text-crema/80">
                                 A finales del siglo XX, el modelo del casino entró en crisis debido al elitismo anacrónico, la aparición de nuevas alternativas de ocio y las restricciones al juego.
                             </p>
-                            <p>
+                            <p className="text-crema/80">
                                 La institución se enfrentó a la "pena de extinción", riesgo que ha motivado el giro estratégico actual hacia la apertura cultural definitiva del siglo XXI.
                             </p>
                         </PremiumAccordion>

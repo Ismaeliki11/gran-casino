@@ -23,8 +23,8 @@ export function PremiumCard({ children, className, delay = 0 }: CardProps) {
                 className
             )}
         >
-            {/* Light effect on hover */}
-            <div className="absolute inset-0 bg-gradient-to-br from-dorado-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+            {/* Light effect on hover - slightly more visible */}
+            <div className="absolute inset-0 bg-gradient-to-br from-dorado-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
             <div className="relative z-10 w-full h-full">
                 {children}

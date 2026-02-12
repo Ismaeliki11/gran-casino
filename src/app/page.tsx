@@ -201,17 +201,17 @@ export default function Home() {
             transition={{ duration: 1 }}
             className="relative"
           >
-            <div className="aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-3xl overflow-hidden border border-dorado-dark/30 liquid-glass">
-              {/* Overlay for depth */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black-primary via-transparent to-transparent z-10" />
+            <div className="aspect-[4/5] sm:aspect-square lg:aspect-[4/5] rounded-3xl overflow-hidden border border-dorado-dark/30 liquid-glass group">
+              {/* Overlay for depth - softened */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black-primary/40 via-transparent to-transparent z-10" />
               <div className="absolute inset-0 bg-dorado-primary/5 mix-blend-overlay z-10" />
               <Image
                 src="/images/hero/IMG_9120.webp"
                 alt="Gran Casino Totana Interior"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
-                quality={72}
-                className="object-cover grayscale opacity-50 contrast-125 transition-transform duration-1000 hover:scale-105"
+                quality={85}
+                className="object-cover transition-transform duration-1000 group-hover:scale-105"
               />
             </div>
           </motion.div>
@@ -229,40 +229,40 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
             <motion.div
               whileHover={{ y: -5 }}
-              className="flex flex-col items-center text-center space-y-6 p-8 rounded-[2.5rem] bg-black-primary/40 border border-dorado-dark/10 shadow-xl"
+              className="flex flex-col items-center text-center space-y-6 p-8 rounded-[2.5rem] bg-black-soft/40 border border-dorado-dark/20 shadow-xl"
             >
-              <div className="p-5 rounded-2xl bg-black-soft border border-dorado-dark/20 text-dorado-primary">
+              <div className="p-5 rounded-2xl bg-black-primary border border-dorado-dark/20 text-dorado-primary">
                 <MapPin size={32} />
               </div>
               <div className="space-y-3">
                 <h4 className="text-2xl font-serif text-crema">Ubicación</h4>
-                <p className="text-dorado-light/40 text-base md:text-lg leading-relaxed">Calle Vidal Abarca, 2<br />30850 Totana, Murcia</p>
+                <p className="text-dorado-light/60 text-base md:text-lg leading-relaxed">Calle Vidal Abarca, 2<br />30850 Totana, Murcia</p>
               </div>
             </motion.div>
 
             <motion.div
               whileHover={{ y: -5 }}
-              className="flex flex-col items-center text-center space-y-6 p-8 rounded-[2.5rem] bg-black-primary/40 border border-dorado-dark/10 shadow-xl"
+              className="flex flex-col items-center text-center space-y-6 p-8 rounded-[2.5rem] bg-black-soft/40 border border-dorado-dark/20 shadow-xl"
             >
-              <div className="p-5 rounded-2xl bg-black-soft border border-dorado-dark/20 text-dorado-primary">
+              <div className="p-5 rounded-2xl bg-black-primary border border-dorado-dark/20 text-dorado-primary">
                 <Phone size={32} />
               </div>
               <div className="space-y-3">
                 <h4 className="text-2xl font-serif text-crema">Contacto</h4>
-                <p className="text-dorado-light/40 text-base md:text-lg leading-relaxed">868 24 12 48<br />institucion@casinototana.es</p>
+                <p className="text-dorado-light/60 text-base md:text-lg leading-relaxed">868 24 12 48<br />institucion@casinototana.es</p>
               </div>
             </motion.div>
 
             <motion.div
               whileHover={{ y: -5 }}
-              className="flex flex-col items-center text-center space-y-6 p-8 rounded-[2.5rem] bg-black-primary/40 border border-dorado-dark/10 shadow-xl"
+              className="flex flex-col items-center text-center space-y-6 p-8 rounded-[2.5rem] bg-black-soft/40 border border-dorado-dark/20 shadow-xl"
             >
-              <div className="p-5 rounded-2xl bg-black-soft border border-dorado-dark/20 text-dorado-primary">
+              <div className="p-5 rounded-2xl bg-black-primary border border-dorado-dark/20 text-dorado-primary">
                 <Clock size={32} />
               </div>
               <div className="space-y-3">
                 <h4 className="text-2xl font-serif text-crema">Gastro Club</h4>
-                <p className="text-dorado-light/40 text-base md:text-lg leading-relaxed">Servicio de Restauración Diaria<br />Consulte horarios y reservas</p>
+                <p className="text-dorado-light/60 text-base md:text-lg leading-relaxed">Servicio de Restauración Diaria<br />Consulte horarios y reservas</p>
               </div>
             </motion.div>
           </div>
