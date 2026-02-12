@@ -17,13 +17,13 @@ export default function HistoriaCompletaPage() {
             {/* Hero Section */}
             <section className="relative min-h-[70vh] flex items-center justify-center pt-24 overflow-hidden">
                 <div className="absolute inset-0 z-0 scale-110">
-                    <div className="absolute inset-0 bg-gradient-to-b from-black-primary/60 via-black-primary/90 to-black-primary z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black-primary/40 via-black-primary/70 to-black-primary z-10" />
                     <Image
                         src="/images/hero/11zon_IMG_9138.webp"
                         alt="Gran Casino de Totana - Patrimonio"
                         fill
                         priority
-                        className="object-cover opacity-30 grayscale"
+                        className="object-cover opacity-50 img-premium"
                     />
                 </div>
 
@@ -84,7 +84,7 @@ export default function HistoriaCompletaPage() {
                             <p>
                                 La fundación se formalizó el 29 de noviembre de 1917, en un momento de gran convulsión social en España. Impulsada por la burguesía terrateniente y comercial de Totana, la institución nació con una vocación explícitamente apolítica.
                             </p>
-                            <div className="liquid-glass border border-dorado-primary/10 p-6 md:p-10 rounded-[2rem] my-8 md:my-12 bg-black-soft/30">
+                            <div className="liquid-glass border border-dorado-primary/10 p-6 md:p-10 rounded-[2rem] my-8 md:my-12 bg-black-soft/10 backdrop-blur-sm">
                                 <h3 className="text-dorado-primary font-serif text-lg md:text-xl mb-4 italic">El Mandato de Neutralidad</h3>
                                 <p className="text-sm md:text-lg mb-0">
                                     Los promotores buscaban activamente alejarse de las "luchas que solían traer las confesiones de este carácter". El Casino aspiraba a ser un "santuario" de ocio donde las diferencias partidistas quedaran suspendidas.
@@ -102,7 +102,7 @@ export default function HistoriaCompletaPage() {
                             src="/images/hero/IMG_9111.webp"
                             alt="La Pecera"
                             fill
-                            className="object-cover grayscale opacity-40 lg:hover:grayscale-0 transition-all duration-1000"
+                            className="object-cover opacity-60 img-premium lg:hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-b from-black-primary via-transparent to-black-primary" />
                         <div className="absolute inset-0 flex items-center justify-center p-4">
@@ -172,7 +172,7 @@ export default function HistoriaCompletaPage() {
                         initial={{ opacity: 0, scale: 0.98 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="mb-16 md:mb-32 relative overflow-hidden rounded-[2.5rem] border border-dorado-primary/20 bg-black-soft/50 p-8 md:p-20"
+                        className="mb-16 md:mb-32 relative overflow-hidden rounded-[2.5rem] border border-dorado-primary/20 bg-black-soft/20 p-8 md:p-20 shadow-2xl"
                     >
                         <div className="absolute top-0 right-0 p-8 opacity-10">
                             <Palette size={120} className="text-dorado-primary" />
@@ -201,7 +201,7 @@ export default function HistoriaCompletaPage() {
                                 Ante la amenaza de desaparición, el Casino ha operado un giro estratégico de 180 grados: ha pasado de ser un club hermético a aspirar a convertirse en el <span className="text-dorado-primary">eje cultural de Totana</span>. Esta transformación ha permitido que el edificio recupere su centralidad mediante la cultura, abriendo sus puertas a toda la ciudadanía.
                             </p>
 
-                            <div className="space-y-6 bg-black-soft/20 p-6 md:p-8 rounded-3xl border border-dorado-primary/5">
+                            <div className="space-y-6 bg-black-soft/10 p-6 md:p-8 rounded-3xl border border-dorado-primary/5">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div className="space-y-4">
                                         <h4 className="text-gold font-serif text-lg flex items-center gap-2">

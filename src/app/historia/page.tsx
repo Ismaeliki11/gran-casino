@@ -111,7 +111,7 @@ export default function HistoriaPage() {
             </section>
 
             {/* Architecture: La Pecera */}
-            <section className="section-visibility fluid-py bg-black-soft/30 overflow-hidden border-y border-dorado-dark/5">
+            <section className="section-visibility fluid-py bg-black-soft/10 overflow-hidden border-y border-dorado-dark/5">
                 <div className="max-w-7xl mx-auto fluid-px grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
@@ -188,7 +188,7 @@ export default function HistoriaPage() {
 
                                 {/* Content Side */}
                                 <div className="w-full md:w-[45%] pl-20 md:pl-0">
-                                    <PremiumCard className="hover:border-dorado-primary/40 p-6 sm:p-10 bg-black-soft/40 backdrop-blur-sm">
+                                    <PremiumCard className="hover:border-dorado-primary/40 p-6 sm:p-10 bg-black-soft/20 backdrop-blur-sm shadow-2xl">
                                         <div className="flex flex-col gap-5">
                                             <div className="flex items-center gap-4">
                                                 <div className="p-3 rounded-2xl bg-black-soft border border-dorado-dark/20 text-dorado-primary">
@@ -272,12 +272,12 @@ export default function HistoriaPage() {
             </section>
 
             {/* Dossier de Investigación Histórica - Lighter Background for readability */}
-            <section className="section-visibility fluid-py fluid-px bg-crema-paper/5 border-t border-dorado-dark/5 backdrop-blur-sm relative">
-                <div className="absolute inset-0 bg-gradient-to-b from-black-primary/50 to-transparent pointer-events-none" />
+            <section className="section-visibility fluid-py fluid-px bg-crema-paper/[0.08] border-t border-dorado-dark/10 backdrop-blur-md relative">
+                <div className="absolute inset-0 bg-gradient-to-b from-black-primary/20 to-transparent pointer-events-none" />
                 <div className="max-w-4xl mx-auto space-y-12 relative z-10">
                     <div className="text-center space-y-4 mb-12">
                         <span className="text-dorado-primary text-xs uppercase tracking-[0.4em] font-bold">Investigación Exhaustiva</span>
-                        <h2 className="fluid-h2 font-serif text-crema italic">Archivos y Crónicas</h2>
+                        <h2 className="fluid-h2 font-serif text-crema tracking-tight">Archivos y Crónicas</h2>
                     </div>
 
                     <div className="space-y-4">
