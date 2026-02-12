@@ -69,13 +69,13 @@ export default function Restaurante() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
                 {/* Background - Using a placeholder or existing image if relevant */}
                 <div className="absolute inset-0">
-                    <div className="absolute inset-0 bg-black-primary/30 z-10" />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black-primary/60 via-transparent to-black-primary z-10" />
+                    <div className="absolute inset-0 bg-black-primary/20 z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black-primary/40 via-transparent to-black-primary/80 z-10" />
                     <Image
-                        src="/images/hero/IMG_9120.webp" // Using an existing interior shot for now
+                        src="/images/hero/IMG_9120.webp"
                         alt="Salón del Restaurante"
                         fill
-                        className="object-cover opacity-80"
+                        className="object-cover img-premium"
                     />
                 </div>
 

@@ -45,7 +45,7 @@ export default function HistoriaPage() {
             {/* Hero Section Historia */}
             <section className="relative min-h-[60svh] md:h-[80vh] flex items-center justify-center pt-24 md:pt-20">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-b from-black-primary/60 via-black-primary/95 to-black-primary z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black-primary/40 via-black-primary/80 to-black-primary z-10" />
                     <Image
                         src="/images/hero/11zon_IMG_9133.webp"
                         alt="Textura histórica del Gran Casino"
@@ -53,7 +53,7 @@ export default function HistoriaPage() {
                         priority
                         sizes="100vw"
                         quality={85}
-                        className="object-cover opacity-45"
+                        className="object-cover img-premium opacity-65"
                     />
                 </div>
 
@@ -126,9 +126,9 @@ export default function HistoriaPage() {
                             fill
                             sizes="(max-width: 1024px) 100vw, 50vw"
                             quality={85}
-                            className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-1000"
+                            className="object-cover img-premium opacity-90 group-hover:scale-105 transition-transform duration-1000"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black-primary via-transparent to-transparent opacity-80" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black-primary/60 via-transparent to-transparent opacity-80" />
                         <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10">
                             <span className="text-dorado-primary text-[10px] uppercase tracking-widest font-bold flex items-center gap-2">
                                 <Eye size={12} /> El Panóptico Social
@@ -246,7 +246,7 @@ export default function HistoriaPage() {
                             src="/images/hero/11zon_IMG_9124.webp"
                             alt="Salón Modernista con pinturas de Gamonal"
                             fill
-                            className="gamonal-image object-cover opacity-80 group-hover:scale-105 transition-all duration-1000"
+                            className="gamonal-image object-cover img-premium opacity-80 group-hover:scale-105 transition-all duration-1000"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black-primary via-black-primary/20 to-transparent" />
 

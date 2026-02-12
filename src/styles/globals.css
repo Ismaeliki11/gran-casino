@@ -116,8 +116,8 @@ h6 {
   width: 200%;
   height: 200%;
   background: radial-gradient(circle at center,
-      rgba(201, 169, 98, 0.12) 0%,
-      rgba(166, 139, 74, 0.05) 25%,
+      rgba(201, 169, 98, 0.18) 0%,
+      rgba(166, 139, 74, 0.08) 25%,
       transparent 50%);
   pointer-events: none;
   filter: blur(42px);
@@ -208,8 +208,17 @@ h6 {
 }
 
 .hover-glow-gold:hover {
-  box-shadow: 0 0 30px rgba(201, 169, 98, 0.1);
-  border-color: rgba(201, 169, 98, 0.4);
+  box-shadow: 0 0 30px rgba(201, 169, 98, 0.15);
+  border-color: rgba(201, 169, 98, 0.5);
+}
+
+.img-premium {
+  filter: contrast(1.02) brightness(1.08);
+  transition: filter 0.5s ease, transform 0.8s ease;
+}
+
+.img-premium:hover {
+  filter: contrast(1.05) brightness(1.12);
 }
 
 .section-visibility {

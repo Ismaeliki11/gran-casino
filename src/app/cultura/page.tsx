@@ -74,7 +74,7 @@ export default function CulturaPage() {
                     <div className="absolute inset-0 bg-gradient-to-b from-black-primary/40 via-black-primary/80 to-black-primary z-10" />
                     <motion.div
                         initial={{ scale: 1.1, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 0.3 }}
+                        animate={{ scale: 1, opacity: 0.5 }}
                         transition={{ duration: 2.5, ease }}
                         className="absolute inset-0"
                     >
@@ -84,8 +84,8 @@ export default function CulturaPage() {
                             fill
                             priority
                             sizes="100vw"
-                            quality={72}
-                            className="object-cover grayscale"
+                            quality={85}
+                            className="object-cover img-premium"
                         />
                     </motion.div>
                 </div>
@@ -137,8 +137,8 @@ export default function CulturaPage() {
                                         alt={space.title}
                                         fill
                                         sizes="(max-width: 1024px) 100vw, 58vw"
-                                        quality={72}
-                                        className="object-cover grayscale opacity-60 group-hover:opacity-80 transition-all duration-1000 group-hover:scale-105"
+                                        quality={85}
+                                        className="object-cover img-premium opacity-90 group-hover:opacity-100 group-hover:scale-105"
                                     />
                                 </div>
                                 {/* Floating Detail */}

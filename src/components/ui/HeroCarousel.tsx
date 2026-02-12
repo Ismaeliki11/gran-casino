@@ -61,12 +61,12 @@ export default function HeroCarousel() {
                 <motion.div
                     key={currentIndex}
                     initial={{ opacity: 0, scale: reduceMotion ? 1 : 1.06 }}
-                    animate={{ opacity: 0.8, scale: 1 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: reduceMotion ? 1 : 0.98 }}
                     transition={{ duration: reduceMotion ? 0.7 : 1.8, ease: [0.4, 0, 0.2, 1] }}
                     className="absolute inset-0"
                 >
-                    <div className="absolute inset-0 bg-black-primary/20 z-10" />
+                    <div className="absolute inset-0 bg-black-primary/10 z-10" />
                     <Image
                         src={SLIDES[currentIndex].url}
                         alt={SLIDES[currentIndex].title}
@@ -74,7 +74,7 @@ export default function HeroCarousel() {
                         priority={currentIndex === 0}
                         sizes="100vw"
                         quality={78}
-                        className="object-cover contrast-[1.05]"
+                        className="object-cover img-premium"
                     />
                 </motion.div>
             </AnimatePresence>
@@ -117,8 +117,8 @@ export default function HeroCarousel() {
             </div>
 
             {/* Premium Vignetado y Gradientes - Softer to let images breathe */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black-primary via-transparent to-black-primary/60 z-20" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black-primary/20 via-transparent to-black-primary/20 z-20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black-primary/40 via-transparent to-black-primary/20 z-20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black-primary/10 via-transparent to-black-primary/10 z-20" />
 
             {/* Reflejos de luz sutiles */}
             <div className="absolute inset-0 opacity-30 z-20 pointer-events-none">

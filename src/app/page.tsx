@@ -57,7 +57,7 @@ export default function Home() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-b from-dorado-light via-dorado-primary to-dorado-dark block pb-2 sm:pb-6">
                   Gran Casino
                 </span>
-                <span className="text-crema/90 text-[clamp(1rem,4vw,3.5rem)] tracking-[0.2em] sm:tracking-widest block uppercase font-light">
+                <span className="text-crema/90 text-[clamp(1rem,4vw,3.5rem)] tracking-[0.1em] sm:tracking-widest block uppercase font-light">
                   De Totana
                 </span>
               </h1>
@@ -211,7 +211,7 @@ export default function Home() {
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 quality={85}
-                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                className="object-cover img-premium"
               />
             </div>
           </motion.div>
