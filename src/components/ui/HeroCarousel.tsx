@@ -71,9 +71,10 @@ export default function HeroCarousel() {
                         src={SLIDES[currentIndex].url}
                         alt={SLIDES[currentIndex].title}
                         fill
-                        priority={currentIndex === 0}
+                        priority
+                        unoptimized={process.env.NODE_ENV === 'production'}
                         sizes="100vw"
-                        quality={78}
+                        quality={90}
                         className="object-cover img-premium"
                     />
                 </motion.div>
@@ -117,13 +118,13 @@ export default function HeroCarousel() {
             </div>
 
             {/* Premium Vignetado y Gradientes - Softer to let images breathe */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black-primary/40 via-transparent to-black-primary/20 z-20" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black-primary/10 via-transparent to-black-primary/10 z-20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black-primary/40 via-transparent to-black-primary/10 z-20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black-primary/5 via-transparent to-black-primary/5 z-20" />
 
             {/* Reflejos de luz sutiles */}
             <div className="absolute inset-0 opacity-30 z-20 pointer-events-none">
-                <div className="absolute top-[-8%] left-[-8%] w-[42%] h-[42%] bg-dorado-primary/10 blur-[80px]" />
-                <div className="absolute bottom-[-8%] right-[-8%] w-[42%] h-[42%] bg-dorado-dark/10 blur-[80px]" />
+                <div className="absolute top-[-10%] left-[-10%] w-[45%] h-[45%] bg-dorado-primary/5 blur-[120px]" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[45%] h-[45%] bg-dorado-dark/5 blur-[120px]" />
             </div>
         </div>
     );

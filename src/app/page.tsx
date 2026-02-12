@@ -41,6 +41,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease }}
+            className="hidden sm:block"
           >
             <div className="p-3 sm:p-6 rounded-full border border-dorado-primary/10 bg-black-soft/30 group relative mb-2 sm:mb-4">
               <CasinoLogo size={42} priority className="sm:w-[56px] sm:h-[56px]" />
@@ -77,15 +78,15 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 sm:mt-10 w-full sm:w-auto px-8"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 sm:mt-10 w-full sm:w-auto"
           >
             <Link href="/socios" className="w-full sm:w-auto">
-              <PremiumButton variant="primary" className="w-full sm:px-12 py-5 shadow-2xl">
+              <PremiumButton variant="primary" className="w-full sm:px-12 py-3.5 sm:py-5 shadow-2xl">
                 Hacerse Socio <ArrowRight size={20} className="ml-2" />
               </PremiumButton>
             </Link>
             <Link href="/historia" className="w-full sm:w-auto">
-              <PremiumButton variant="outline" className="w-full sm:px-12 py-5 backdrop-blur-sm">
+              <PremiumButton variant="outline" className="w-full sm:px-12 py-3.5 sm:py-5">
                 Explorar Historia
               </PremiumButton>
             </Link>

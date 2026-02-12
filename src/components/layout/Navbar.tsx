@@ -82,10 +82,10 @@ export default function Navbar() {
                         damping: 28,
                     }}
                     className={cn(
-                        "relative mx-auto pointer-events-auto backdrop-blur-xl border-b flex items-center transition-all duration-500",
+                        "relative mx-auto pointer-events-auto border-b flex items-center transition-all duration-300",
                         isScrolled
-                            ? "w-full h-[70px] px-4 sm:px-6 lg:px-10"
-                            : "w-full h-[90px] px-6 sm:px-8 bg-transparent border-transparent"
+                            ? "w-full h-[70px] px-4 sm:px-6 lg:px-10 backdrop-blur-md border-dorado-dark/20"
+                            : "w-full h-[90px] px-6 sm:px-8 bg-transparent border-transparent backdrop-blur-none"
                     )}
                 >
                     <div className="flex items-center justify-between w-full max-w-7xl mx-auto">
